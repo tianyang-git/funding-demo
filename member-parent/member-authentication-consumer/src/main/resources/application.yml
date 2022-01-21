@@ -1,0 +1,26 @@
+server:
+  port: 4000
+spring:
+  application:
+    name: funding-auth
+  thymeleaf:
+    prefix:  classpath:/templates/
+    suffix: .html
+  redis:
+    host: 127.0.0.1
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+short:
+  message:
+    host: https://dfsns.market.alicloudapi.com
+    path: /data/send_sms
+    method: POST
+    appcode: 2f23a9a920d14ab69fcc21c214f4f76a
+    template_id: TPL_0000
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000

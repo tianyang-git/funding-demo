@@ -1,0 +1,29 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: funding-project
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 127.0.0.1
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+
+aliyun:
+  oss:
+    access-key-id: LTAI5tHEaPMxk8fErvhauCcD
+    access-key-secret: 7aXpLkTcu1Ql5ADFuRWSwtqrldovkj
+    bucket-domain: http://funding-project-test.oss-cn-zhangjiakou.aliyuncs.com
+    bucket-name: funding-project-test
+    end-point: http://oss-cn-zhangjiakou.aliyuncs.com
+
+#    用户登录名称 funding-project-test@1716080973180308.onaliyun.com
+#    AccessKey ID LTAI5tHEaPMxk8fErvhauCcD
+#    AccessKey Secret 7aXpLkTcu1Ql5ADFuRWSwtqrldovkj
